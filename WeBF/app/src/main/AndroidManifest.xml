@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eum.webf">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.eum.webf.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.eum.webf.LoginActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan">
+
+        </activity>
+        <activity android:name="com.eum.webf.TagReadActivity">
+            <!--<intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain" />
+            </intent-filter>-->
+            <meta-data
+                android:name="android.nfc.action.NDEF_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity android:name="com.eum.webf.CategoryActivity">
+
+        </activity>
+        <activity android:name="com.eum.webf.DocListActivity">
+
+        </activity>
+        <activity android:name="com.eum.webf.DocumentActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog">
+        </activity>
+        <activity android:name="com.eum.webf.TagWriteActivity">
+
+        </activity>
+        <activity android:name="com.eum.webf.DocumentActivity_R"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog">
+        </activity>
+        <activity android:name=".TagReadOutProcess"
+            android:theme="@style/Theme.TransparentTheme">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/com.eum.webf"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/table_row_background">
+    <TextView
+        android:id="@+id/doc_number"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="left"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="번호"/>
+    <TextView
+        android:id="@+id/doc_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_weight="2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="left"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="제목"/>
+    <TextView
+        android:id="@+id/doc_date"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:gravity="right"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="작성일"/>
+</TableRow>

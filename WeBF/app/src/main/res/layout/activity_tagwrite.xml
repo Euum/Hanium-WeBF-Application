@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NFC 태그를 가져다 대세요.\nURL을 기록합니다."
+        android:gravity="center"
+        android:textSize="20sp"
+        android:padding="30dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/nfc_cellphone_png"/>
+    <TextView
+        android:id="@+id/writeState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NFC 기록중..."
+        android:textSize="20sp"
+        android:padding="30dp"
+        android:gravity="center"/>
+</LinearLayout>
